@@ -1,0 +1,238 @@
+.content-section {
+    padding: 1rem 12.7%;
+}
+
+@media screen and (max-width: 1440px){
+    .content-section {
+        padding: 1rem 3.7%;
+    }
+}
+.text-section {
+    background: #ffffff;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    /* background-color: #FFDEE9; */
+    background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+    
+}
+
+
+header {
+    color: #333;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 120%;
+}
+
+
+:root {
+    --underline-intrinsic-width: 8;
+    --underline-width: 12;
+    --underline-color: #f1a1e3;
+    --underline-cap-width: 4px;
+    --underline-offset-y: -2px;
+    --underline-padding-x: 0.12em;
+  }
+    
+h1 {
+    font-weight: 400 !important;
+    display: inline;
+    --underline-width-scale: calc(var(--underline-width) / var(--underline-intrinsic-width));
+    padding: 0 calc(var(--underline-padding-x) + calc(var(--underline-cap-width) * var(--underline-width-scale)));
+    box-decoration-break: clone;
+    background-repeat: no-repeat;
+    color: #32557f;
+    background-image:
+      linear-gradient(180deg, var(--underline-color), var(--underline-color)),
+      var(--cap-image-left),
+      var(--cap-image-right);
+    background-position-x:
+      calc(var(--underline-cap-width) * var(--underline-width-scale)),
+      0,
+      100%;
+    background-position-y: calc(100% - var(--underline-offset-y) * -1);
+    background-size:
+      calc(100% - calc(var(--underline-cap-width) * var(--underline-width-scale) * 2)) calc(var(--underline-width) * 1px),
+      auto calc(var(--underline-width) * 1px),
+      auto calc(var(--underline-width) * 1px);
+      
+    font-size: 3rem;
+    font-weight: bold;
+    --underline-width: 20;
+    --underline-offset-y: -2px;
+    /* The cap images to use that form the left and right shape.*/
+    --cap-image-left: url(https://files-6lc03kjqt.now.sh/left-2.svg);
+    --cap-image-right: url(https://files-e7gkh52mq.now.sh/right-2.svg);
+  }
+
+/* Other styles remain the same */
+
+.map-container {
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.active, .collapsible:hover {
+    background-color: #ccc;
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: scroll;
+    transition: max-height 0.2s ease-out;
+    background-color: #f9f9f9;
+    margin-bottom: 1rem;
+}
+
+.content img{
+    margin: 25px 2.5rem;
+    max-width: 50%;
+    display: block; /* Use block to prevent awkward text wrapping for modern design */
+    border-radius: 4px; /* Optional: for rounded corners on images */
+}
+
+.content img.align-left {
+    float: left; /* or right */
+}
+
+.content img.align-right {
+    float: right; /* or right */
+}
+
+/* ... previous CSS code ... */
+
+.collapsible-container .active, .collapsible-container .collapsible:hover {
+    background-color: #f1f1f1;
+}
+
+.collapsible-container .content {
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #fff;
+    margin-bottom: 1rem;
+}
+/* Clear floats after the paragraphs */
+.content p:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Collapsible button styling */
+.collapsible {
+    background-color: #f7f7f7;
+    color: #444;
+    cursor: pointer;
+    padding: 25px 20px;
+    display: block;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-size: 20px;
+    outline: none;
+    width: 100%;
+    transition: background-color 0.2s ease;
+    box-sizing: border-box;
+    border-left: 5px solid #74ABE2; /* Highlight color indicator */
+}
+
+/* Hover and active styles */
+.collapsible:hover, .collapsible.active {
+    background-color: #e7e7e7;
+}
+
+/* Collapsible content area styling */
+.content {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: scroll;
+    transition: max-height 0.3s ease-out;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Clear floats after the content */
+.content:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Additional padding for text around images */
+.content p {
+    padding: 0px 10px 10px 10px;
+    font-size: 20px;
+}
+
+img{
+    max-height: 500px;
+}
+
+
+.collapsible-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.compare-contrast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 44px;
+}
+
+.section {
+    width: calc(95% - 10px); /* Adjust width for spacing */
+    margin: 15px 0px;
+    padding: 10px;
+    border-radius: 8px;
+    color: #333; /* Readable text color */
+    text-align: center;
+}
+
+.section-title {
+    margin: 0;
+    padding: 0;
+}
+
+.section-text {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+footer{
+    font-size: 12px !important;
+    margin-top: 5%;
+}
